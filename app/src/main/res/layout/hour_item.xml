@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:backgroundTint="@android:color/transparent"
+    android:layout_width="wrap_content"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_bg_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hour"
+>
+        <TextView
+            android:layout_marginLeft="13.5dp"
+            android:layout_marginRight="13.5dp"
+            android:layout_marginTop="8.5dp"
+            android:layout_marginBottom="8.5dp"
+            android:id="@+id/tv_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14:00"
+            android:textColor="@color/black_font"
+            android:fontFamily="@font/inter"
+            android:textSize="16dp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/background_white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:context=".MainActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/main_inf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/btn_back"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/btn_return">
+
+                        <ImageView
+                            android:id="@+id/arrow_left"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_left" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:text="Schedule appointment"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/btn_back"
+                        app:layout_constraintTop_toBottomOf="parent" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Name"
+                    android:textColor="@color/black_font"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/input_field"
+                    android:padding="16dp"
+                    android:text="Patient name"
+                    android:textColorHint="@color/black_font"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Age"
+                    android:textColor="@color/black_font"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <Spinner
+                    android:id="@+id/spinner_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/spiiner_style1"
+                    android:padding="16dp" />
+
+                <Button
+                    android:id="@+id/btn_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/btnd_gradient"
+                    android:fontFamily="@font/inter"
+                    android:text="Set Appointment"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/second_part"
+                android:layout_width="300dp"
+
+                android:layout_height="match_parent"
+
+
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Type of Appointemnt"
+                    android:textColor="@color/black_font"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <Spinner
+                    android:id="@+id/spinner_appointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/spiiner_style1"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Choose Date"
+                    android:textColor="@color/black_font"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_pickDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/date_picker" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Select Time Slot"
+                    android:textColor="@color/black_font"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_rv"
+                    android:layout_width="277dp"
+                    android:layout_height="76dp" />
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
