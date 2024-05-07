@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".second_screen">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:background="@drawable/btn_return">
+
+                <ImageView
+                    android:id="@+id/arrow_left"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/arrow_left" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+
+                android:gravity="start"
+                android:text="Your activity"
+
+                android:fontFamily="@font/inter"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/btn_back"
+                app:layout_constraintTop_toBottomOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_inf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter"
+                android:text="Upcoming events"
+                android:textColor="@color/black_font"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/current_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="2023-12-12"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txt_appointment_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter"
+                    android:layout_marginTop="14dp"
+                    android:text="__:__"
+                    android:textColor="@color/black_font"
+                    android:textSize="14sp"
+                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_appointment_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/inter"
+                        android:layout_marginTop="7dp"
+                        android:text="Consultation"
+                        android:textColor="@color/black_font"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_appointment_patient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/inter"
+                        android:text="Harry Styles"
+                        android:textColor="@color/black_font"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintStart_toEndOf="@id/txt_appointment_type"
+
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter"
+                android:text="All upcoming apointments"
+                android:textColor="@color/black_font"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_white">
+                <TableRow
+                    android:id="@+id/table_row_layout"
+                    android:background="@drawable/input_field">
+
+                    <TextView
+                        android:id="@+id/tv_fullName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Full name"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+                    <TextView
+                        android:id="@+id/tv_Age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Age"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+                    <TextView
+                        android:id="@+id/tv_Type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Type"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+                    <TextView
+                        android:id="@+id/tv_Date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+                    <TextView
+                        android:id="@+id/tv_Time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_table"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter"
+                android:text="All cancelled apointments"
+                android:textColor="@color/black_font"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_white">
+                <TableRow
+                    android:id="@+id/table_row_layout2"
+                    android:background="@drawable/input_field">
+
+                    <TextView
+                        android:id="@+id/tv_fullName2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Full name"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+                    <TextView
+                        android:id="@+id/tv_Age2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Age"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+                    <TextView
+                        android:id="@+id/tv_Type2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Type"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+                    <TextView
+                        android:id="@+id/tv_Date2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+                    <TextView
+                        android:id="@+id/tv_Time2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textSize="14sp"
+                        android:padding="1dp"
+                        android:layout_weight="6"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_table2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
