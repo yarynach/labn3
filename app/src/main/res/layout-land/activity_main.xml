@@ -173,6 +173,9 @@
                     android:id="@+id/btn_pickDate"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
+                    android:textAlignment="textStart"
+                    android:padding="16dp"
+                    android:fontFamily="@font/inter"
                     android:background="@drawable/date_picker" />
 
                 <TextView

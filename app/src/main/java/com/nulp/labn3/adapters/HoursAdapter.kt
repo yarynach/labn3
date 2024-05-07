@@ -1,12 +1,12 @@
-package com.nulp.labn3
+package com.nulp.labn3.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.nulp.labn3.R
 
 // Hour class with selection state
 data class Hour(val text: String, var selected: Boolean = false)
