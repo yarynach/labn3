@@ -1,7 +1,10 @@
 package com.nulp.labn3
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -77,6 +80,12 @@ class db_activity : AppCompatActivity() {
         tableRecyclerView2.layoutManager = LinearLayoutManager(this)
         tableRecyclerView2.adapter = tableRowAdapter2
 
+
+        val backButton: ImageView =findViewById(R.id.arrow_left)
+        backButton.setOnClickListener{
+            val intent = Intent(this, api_activity::class.java)
+            startActivity(intent)
+        }
 
 
 

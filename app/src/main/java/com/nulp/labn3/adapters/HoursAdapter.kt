@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.nulp.labn3.R
 
-// Hour class with selection state
+// Hour class
 data class Hour(val text: String, var selected: Boolean = false)
 
 // Adapter class

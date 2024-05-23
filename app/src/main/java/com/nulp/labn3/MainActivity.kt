@@ -100,6 +100,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+        //calendar
         val btnPickDate: Button = findViewById(R.id.btn_pickDate)
         btnPickDate.setOnClickListener {
             val c = Calendar.getInstance()
@@ -116,9 +117,10 @@ class MainActivity : AppCompatActivity() {
             datePickerDialog.show()
         }
 
-
+        //  dialog
         val setButton: Button = findViewById(R.id.btn_set)
         val popupConfirmation: Dialog = Dialog(this)
+
         setButton.setOnClickListener{
             popupConfirmation.setContentView(R.layout.popup)
             popupConfirmation.getWindow()?.addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
@@ -135,7 +137,7 @@ class MainActivity : AppCompatActivity() {
 
             popupConfirmation.show()
         }
-
+        // to db_activity
         val backButton: ImageView=findViewById(R.id.arrow_left)
         backButton.setOnClickListener{
             val intent = Intent(this, db_activity::class.java)
@@ -211,18 +213,18 @@ class MainActivity : AppCompatActivity() {
         writeMessage("Insert")
         val dao = db.appointmentsDAO()
         val daoNotif = db.notificationsDAO()
-        val appointment1 = Appointments(1,"Name Surname", 18,"Consultation", LocalDate.parse("2024-05-07"),"23:00")
+        val appointment1 = Appointments(1,"Name Surname", 18,"Consultation", LocalDate.parse("2024-05-09"),"23:00")
 
         dao.insert(appointment1)
         val notif1= Notifications(1,1,"upcoming")
         daoNotif.insert(notif1)
 
-        val appointment2 = Appointments(2,"Name Surname2", 24,"Consultation", LocalDate.parse("2024-05-07"),"23:30")
+        val appointment2 = Appointments(2,"Name Surname2", 24,"Consultation", LocalDate.parse("2024-05-09"),"23:30")
         dao.insert(appointment2)
         val notif2= Notifications(2,2,"cancelled")
         daoNotif.insert(notif2)
 
-        val appointment3 = Appointments(3,"Name Surname3", 24,"Consultation", LocalDate.parse("2024-05-07"),"22:45")
+        val appointment3 = Appointments(3,"Name Surname3", 24,"Consultation", LocalDate.parse("2024-05-09"),"22:45")
         dao.insert(appointment3)
         val notif3= Notifications(3,3,"upcoming")
         daoNotif.insert(notif3)
@@ -232,7 +234,7 @@ class MainActivity : AppCompatActivity() {
         val notif4= Notifications(4,4,"upcoming")
         daoNotif.insert(notif4)
 
-        val appointment5 = Appointments(5,"Name Surname3", 24,"Consultation", LocalDate.parse("2024-05-06"),"23:30")
+        val appointment5 = Appointments(5,"Name Surname3", 24,"Consultation", LocalDate.parse("2024-05-09"),"23:30")
         dao.insert(appointment5)
         val notif5= Notifications(5,5,"upcoming")
         daoNotif.insert(notif5)
